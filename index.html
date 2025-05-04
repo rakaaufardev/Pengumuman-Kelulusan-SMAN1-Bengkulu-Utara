@@ -325,10 +325,6 @@
             <h3>Hasil Pencarian</h3>
             <table class="result-table" id="student-data">
                 <tr>
-                    <th>Nomor Peserta</th>
-                    <td id="nomor-peserta"></td>
-                </tr>
-                <tr>
                     <th>Nama</th>
                     <td id="nama"></td>
                 </tr>
@@ -4501,7 +4497,6 @@
 
             if (student) {
                 // Tampilkan data siswa jika ditemukan
-                document.getElementById('nomor-peserta').textContent = student.nomorPeserta;
                 document.getElementById('nama').textContent = student.nama;
                 document.getElementById('kelas').textContent = student.kelas;
                 document.getElementById('nisn-display').textContent = student.nisn;
