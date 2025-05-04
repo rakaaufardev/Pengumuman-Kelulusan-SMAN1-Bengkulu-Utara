@@ -26,11 +26,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .school-info {
             display: flex;
             align-items: center;
+            margin-bottom: 10px;
         }
 
         .school-text {
@@ -63,12 +65,14 @@
 
         .form-container {
             max-width: 500px;
+            width: 100%;
             margin: 30px auto;
             padding: 25px;
             background: white;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
             flex-grow: 1;
+            box-sizing: border-box;
         }
 
         .title-centered {
@@ -167,6 +171,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: auto;
         }
 
         .footer .line {
@@ -196,6 +201,89 @@
             object-fit: contain;
             border-radius: 10px;
             margin-right: 15px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .school-info {
+                margin-bottom: 15px;
+                width: 100%;
+            }
+
+            .contact-info {
+                text-align: left;
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            .form-container {
+                max-width: 100%;
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .school-text h1 {
+                font-size: 20px;
+            }
+
+            .title-centered {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .school-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header img {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+
+            .school-text h1 {
+                font-size: 18px;
+            }
+
+            .school-text p {
+                font-size: 12px;
+            }
+
+            .form-container {
+                padding: 15px 10px;
+            }
+
+            .title-centered {
+                font-size: 20px;
+            }
+
+            .result-table th,
+            .result-table td {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+
+            .result-status {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .school-text h1 {
+                font-size: 16px;
+                line-height: 1.2;
+            }
+
+            .result-table th {
+                width: 35%;
+            }
         }
     </style>
 </head>
