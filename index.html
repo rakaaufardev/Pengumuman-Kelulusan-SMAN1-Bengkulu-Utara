@@ -324,6 +324,14 @@
         <div id="result">
             <h3>Hasil Pencarian</h3>
             <table class="result-table" id="student-data">
+                <!-- <tr>
+                    <th>Nomor Peserta</th>
+                    <td id="nomor-peserta"></td>
+                </tr> -->
+                <tr>
+                    <th>NISN</th>
+                    <td id="nisn-display"></td>
+                </tr>
                 <tr>
                     <th>Nama</th>
                     <td id="nama"></td>
@@ -332,14 +340,12 @@
                     <th>Kelas</th>
                     <td id="kelas"></td>
                 </tr>
-                <tr>
-                    <th>NISN</th>
-                    <td id="nisn-display"></td>
-                </tr>
-                <tr>
+
+                <!-- <tr>
                     <th>Ruang</th>
                     <td id="ruang"></td>
-                </tr>
+                </tr> -->
+
             </table>
             <div class="result-status" id="status-kelulusan">Selamat Anda Dinyatakan LULUS dari SMA N 1 Bengkulu Utara
             </div>
@@ -4497,10 +4503,11 @@
 
             if (student) {
                 // Tampilkan data siswa jika ditemukan
+                //document.getElementById('nomor-peserta').textContent = student.nomorPeserta;
                 document.getElementById('nama').textContent = student.nama;
                 document.getElementById('kelas').textContent = student.kelas;
                 document.getElementById('nisn-display').textContent = student.nisn;
-                document.getElementById('ruang').textContent = student.ruang;
+                //document.getElementById('ruang').textContent = student.ruang;
 
                 resultDiv.style.display = 'block';
                 resultDiv.classList.remove('error');
